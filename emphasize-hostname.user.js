@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name           emphasize-domain
+// @name           emphasize-hostname
 // @namespace      anbt
 // @include        *
 // ==/UserScript==
