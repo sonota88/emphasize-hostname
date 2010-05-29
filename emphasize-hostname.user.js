@@ -30,8 +30,7 @@ THE SOFTWARE.
 */
 
 
-(function(){
-   var d = document;
+(function(d){
 
    function getPasswordBox(){
      var inputs = d.getElementsByTagName("input");
@@ -70,4 +69,4 @@ THE SOFTWARE.
              );
 
    passwordBox.parentNode.insertBefore(hostname, passwordBox);
- })();
+ })(document);
