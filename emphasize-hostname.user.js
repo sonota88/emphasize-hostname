@@ -31,7 +31,7 @@ THE SOFTWARE.
 (function(){
    var d = document;
 
-   function passwordBox(){
+   function getPasswordBox(){
      var inputs = d.getElementsByTagName("input");
      for(var a=0; a<inputs.length; a++){
        if(inputs[a].getAttribute("type") === "password" ){
@@ -51,7 +51,7 @@ THE SOFTWARE.
    ////////////////////////////////
 
 
-   var target = passwordBox();
+   var target = getPasswordBox();
    var hostname = d.createElement("p");
    hostname.innerHTML = location.href.split("/")[2];
    applyRules(hostname
