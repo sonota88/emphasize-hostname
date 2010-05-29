@@ -48,25 +48,30 @@ THE SOFTWARE.
      }
    }
 
+   function showHostname(passwordBox){
+     var hostname = d.createElement("p");
+     hostname.innerHTML = location.href.split("/")[2];
+     applyRules(hostname
+                , {
+                  border          : "solid 8px red"
+                  , background    : "Lime"
+                  , color         : "purple"
+                  , font          : "200% bold"
+                  , padding       : "1ex"
+                  , margin        : "2px"
+                  , letterSpacing : "0.1ex"
+                  , fontFamily    : "monospace"
+                }
+               );
+
+     passwordBox.parentNode.insertBefore(hostname, passwordBox);
+   }
+
 
    ////////////////////////////////
 
 
    var passwordBox = getPasswordBox();
-   var hostname = d.createElement("p");
-   hostname.innerHTML = location.href.split("/")[2];
-   applyRules(hostname
-              , {
-                border: "solid 8px red"
-                , background: "Lime"
-                , color: "purple"
-                , font: "200% bold"
-                , padding: "1ex"
-                , margin: "2px"
-                , letterSpacing: "0.1ex"
-                , fontFamily: "monospace"
-              }
-             );
+   if(passwordBox){ showHostname(passwordBox); }
 
-   passwordBox.parentNode.insertBefore(hostname, passwordBox);
  })(document);
