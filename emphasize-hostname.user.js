@@ -52,9 +52,9 @@ THE SOFTWARE.
 
 
    var target = passwordBox();
-   var domain = d.createElement("p");
-   domain.innerHTML = location.href.split("/")[2];
-   applyRules(domain
+   var hostname = d.createElement("p");
+   hostname.innerHTML = location.href.split("/")[2];
+   applyRules(hostname
               , {
                 border: "solid 8px red"
                 , background: "Lime"
@@ -67,5 +67,5 @@ THE SOFTWARE.
               }
              );
 
-   target.parentNode.insertBefore(domain, target);
+   target.parentNode.insertBefore(hostname, target);
  })();
