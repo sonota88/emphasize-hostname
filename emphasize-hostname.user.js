@@ -51,7 +51,7 @@ THE SOFTWARE.
    ////////////////////////////////
 
 
-   var target = getPasswordBox();
+   var passwordBox = getPasswordBox();
    var hostname = d.createElement("p");
    hostname.innerHTML = location.href.split("/")[2];
    applyRules(hostname
@@ -67,5 +67,5 @@ THE SOFTWARE.
               }
              );
 
-   target.parentNode.insertBefore(hostname, target);
+   passwordBox.parentNode.insertBefore(hostname, passwordBox);
  })();
